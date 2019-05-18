@@ -12,4 +12,12 @@
         <servlet-name>Myservlet</servlet-name>
         <url-pattern>/hello</url-pattern>
     </servlet-mapping>
+    <filter>
+        <filter-name>Myfilter</filter-name>
+        <filter-class>com.infopulse.filter.ParamFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>Myfilter</filter-name>
+        <url-pattern>/hello</url-pattern>
+    </filter-mapping>
 </web-app>

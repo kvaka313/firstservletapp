@@ -31,11 +31,14 @@ public class HelloServlet extends HttpServlet {
             formValue = request.getParameter("username");
             hs.setAttribute("user", formValue);
         }
+        String filterParam = (String)request.getAttribute("filter");
         response.setContentType("text/html");
+
         PrintWriter pw = response.getWriter();
         pw.println("<html>");
         pw.println("<body>");
         pw.println("Hello, "+formValue);
+        pw.println("Filter param "+filterParam);
         pw.println("</body>");
         pw.println("</html>");
         pw.close();
